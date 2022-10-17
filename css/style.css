@@ -1,3 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body{
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.home{
+    display: grid;;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 20% 50% auto 20%;
+    grid-template-areas: 
+        "nav"
+        "title"
+        "intro-card"
+        "card-grid"
+        "footer";
+}
+
+.navigation {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    background-color: rgb(143, 188, 143, 0.5);
+}
+
+.dropdown {
+    height: 100%;
+}
+
+.dropdown-button {
+    background-color: rgb(143, 188, 143, 0);
+    min-width: 180px;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+}
+
+.dropdown-button:hover {
+    background-color: rgb(143, 188, 143, 1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.title {
+    grid-area: title;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+
+
+.intro-card {
+    grid-area: intro-card;
+    margin-top: 40px;
+    /* background-color: yellowgreen; */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+        "intro-img"
+        "intro-text";
+}
+
+.intro-img {
+    grid-area: intro-img;
+    /* background-color: cornflowerblue; */
+    /* border: 1px solid black; */
+    overflow-y: hidden;
+    border-radius: 5px;
+}
+
+.intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-text {
+    grid-area: intro-text;
+    /* background-color: crimson; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+
+
+.card-grid {
+    height: 5000px;
+    width: 100%;
+    grid-area: card-grid;
+    /* background-color: plum; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    row-gap: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(13, auto);
+    grid-template-areas: 
+        "week1"
+        "week2"
+        "week3"
+        "week4"
+        "week5"
+        "week6"
+        "holiday"
+        "week7"
+        "week8"
+        "week9"
+        "week10"
+        "week11"
+        "week12";
+}
+
+.card {
+    border: 1px black solid;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "card-img"
+        "card-text";
+}
+
+.card-img {
+    grid-area: card-img;
+    background-color: aqua;
+
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    grid-area: card-text;
+    background-color: darkgoldenrod;
+}
+
+
+.week1 {
+    grid-area: week1;
+    /* height: 200px; */
+    /* background-color: darkgoldenrod; */
+}
+
+.week2 {
+    grid-area: week2;
+    /* height: 200px; */
+    /* background-color: powderblue; */
+}
+
+.week3 {
+    grid-area: week3;
+    /* height: 200px; */
+    /* background-color: darkgoldenrod; */
+}
+
+.week4 {
+    grid-area: week4;
+    /* height: 200px; */
+    /* background-color: powderblue; */
+}
+
+.week5 {
+    grid-area: week5;
+    /* height: 200px; */
+    /* background-color: darkgoldenrod; */
+}
+
+.week6 {
+    grid-area: week6;
+    /* height: 200px; */
+    /* background-color: powderblue; */
+}
+
+.holiday {
+    grid-area: holiday;
+    /* height: 200px; */
+    /* background-color: darkgoldenrod; */
+}
+
+.week7 {
+    grid-area: week7;
+    /* height: 200px; */
+    /* background-color: powderblue; */
+}
+
+.week8 {
+    grid-area: week8;
+    /* height: 200px; */
+    /* background-color: darkgoldenrod; */
+}
+
+.week9 {
+    grid-area: week9;
+    /* height: 200px; */
+    /* background-color: powderblue; */
+}
+
+.week10 {
+    grid-area: week10;
+    /* height: 200px; */
+    /* background-color: darkgoldenrod; */
+}
+
+.week11 {
+    grid-area: week11;
+    /* height: 200px; */
+    /* background-color: powderblue; */
+}
+
+.week12 {
+    grid-area: week12;
+    /* height: 200px; */
+    /* background-color: darkgoldenrod; */
+}
+
+
+
+footer {
+    grid-area: footer;
+    background-color: rgb(143, 188, 143, 0.5);
+}
+
+
+
+
+
+@media screen and (min-width: 688px){
+    .title {
+        padding-left: 18.5%;
+        font-size: 30px;
+    }
+
+   
+}
+
+@media screen and (min-width: 992px){
+    .intro-card {
+        grid-template-columns: 36% 24%;
+        justify-content: center;
+        column-gap: 40px;
+        grid-template-rows: auto;
+        grid-template-areas: "intro-img intro-text";
+    }
+
+    .card-grid {
+        height: 2000px;
+        justify-content: center;
+        grid-template-columns: 20% 20% 20%;
+        grid-template-rows: auto auto auto auto auto;
+        column-gap: 20px;
+        row-gap: 40px;
+        grid-template-areas: 
+            "week1 week2 week3"
+            "week4 week5 week6"
+            "holiday week7 week8"
+            "week9 week10 week11"
+            "week12 none none";
+    }    
+
+    .intro-text {
+        padding-top: 10%;
+    }
+
+
+}
+
+@media screen and (min-width: 1312px){}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .box-model-activity {
     width: 600px;
     padding: 10px;
