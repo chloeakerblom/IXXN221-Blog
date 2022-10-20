@@ -718,6 +718,11 @@ ol {
         grid-template-rows: 10% 7% 10% auto 20% 20%;
     }
 
+    .post-body img {
+        width: 60%;
+        /* margin-left: 15%; */
+    }
+
 
 }
 
