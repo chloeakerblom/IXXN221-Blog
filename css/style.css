@@ -4,8 +4,6 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -120,11 +118,9 @@ span {
 
 .title {
     grid-area: title;
-    /* background-color: blueviolet; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding-left: 5%; */
     font-size: 20px;
     padding-top: 30px;
 }
@@ -134,7 +130,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding-left: 5%; */
     padding-top: 30px;
     overflow-y: hidden;
 }
@@ -142,7 +137,6 @@ span {
 .intro-card {
     grid-area: intro-card;
     margin-top: 40px;
-    /* background-color: yellowgreen; */
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 55% 45%;
@@ -153,8 +147,6 @@ span {
 
 .intro-img {
     grid-area: intro-img;
-    /* background-color: cornflowerblue; */
-    /* border: 1px solid black; */
     overflow-y: hidden;
     border-radius: 0px;
 }
@@ -166,12 +158,11 @@ span {
     margin-top: 0;
     border: none;
     border-radius: 0px;
+    object-position: center 7.5%;
 }
 
 .intro-text {
     grid-area: intro-text;
-    /* background-color: crimson; */
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
@@ -189,7 +180,6 @@ span {
     height: 6000px;
     width: 100%;
     grid-area: card-grid;
-    /* background-color: plum; */
     margin-top: 60px;
     margin-bottom: 40px;
     row-gap: 20px;
@@ -277,7 +267,6 @@ span {
 
 .card-text {
     grid-area: card-text;
-    /* background-color: darkgoldenrod; */
     padding-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -293,80 +282,54 @@ span {
 
 .week1 {
     grid-area: week1;
-    /* height: 200px; */
-    /* background-color: darkgoldenrod; */
 }
 
 .week2 {
     grid-area: week2;
-    /* height: 200px; */
-    /* background-color: powderblue; */
 }
 
 .week3 {
     grid-area: week3;
-    /* height: 200px; */
-    /* background-color: darkgoldenrod; */
 }
 
 .week4 {
     grid-area: week4;
-    /* height: 200px; */
-    /* background-color: powderblue; */
 }
 
 .week5 {
     grid-area: week5;
-    /* height: 200px; */
-    /* background-color: darkgoldenrod; */
 }
 
 .week6 {
     grid-area: week6;
-    /* height: 200px; */
-    /* background-color: powderblue; */
 }
 
 .holiday {
     grid-area: holiday;
-    /* height: 200px; */
-    /* background-color: darkgoldenrod; */
 }
 
 .week7 {
     grid-area: week7;
-    /* height: 200px; */
-    /* background-color: powderblue; */
 }
 
 .week8 {
     grid-area: week8;
-    /* height: 200px; */
-    /* background-color: darkgoldenrod; */
 }
 
 .week9 {
     grid-area: week9;
-    /* height: 200px; */
-    /* background-color: powderblue; */
 }
 
 .week10 {
     grid-area: week10;
-    /* height: 200px; */
-    /* background-color: darkgoldenrod; */
 }
 
 .week11 {
     grid-area: week11;
-    /* height: 200px; */
-    /* background-color: powderblue; */
 }
 
 .week12 {
     grid-area: week12;
-    /* height: 200px; */
-    /* background-color: darkgoldenrod; */
 }
 
 .post-title {
@@ -384,6 +347,10 @@ span {
 
 .post-body h3, .post-body p, .post-body ul, .post-body img, .post-body ol{
     margin-bottom: 0.75rem;
+}
+
+.post-body img {
+    margin-top: 0.2rem;
 }
 
 .page-arrows {
@@ -426,7 +393,6 @@ img {
       rgb(143, 188, 143, 1) 50%,
       #000 50%
     );
-    /* font-size: 17px; */
     background-size: 200% 50%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -456,10 +422,6 @@ img {
     background-position: 0;
 }
 
-/* .page-arrows span {
-    display: flex;
-} */
-
 .page-arrows .material-symbols-outlined {
     line-height: 0.55;
 }
@@ -478,6 +440,31 @@ ol {
     border-left: 3px solid rgb(143, 188, 143, 0.5);
     padding-left: 1rem;
     margin-left: 1rem;
+}
+
+.line {
+    border-bottom: 3px dotted rgb(143, 188, 143, 0.5);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-body a {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(143, 188, 143, 0.5);
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+}
+
+.post-body a:hover {
+    color: rgb(143, 188, 143, 0.5);
+}
+
+.box-model-activity {
+    width: 600px;
+    padding: 10px;
+    border: 5px solid orange;
+    margin: 20px;
+    background-color: greenyellow;
 }
 
 
@@ -560,12 +547,7 @@ ol {
     }
 
     .post-body {
-        /* grid-area: post-body;
-        display: grid;
-        justify-content: center; */
         grid-template-columns: 80%;
-        /* width: 100%;
-        height: max-content; */
     }
 
     .page-arrows {
@@ -620,7 +602,6 @@ ol {
 
     .title {
         grid-area: title;
-        /* background-color: blueviolet; */
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -639,12 +620,10 @@ ol {
 
     .dropdown-button {
         font-size: 17px;
-        /* min-width: 180px; */
     }
 
     .dropdown-content {
         font-size: 12px;
-        /* min-width: 180px; */
     }
 
     .post{
@@ -656,7 +635,6 @@ ol {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        /* padding-left: 5%; */
         padding-top: 50px;
         padding-left: 18.25%;
         font-weight: 300;
@@ -668,12 +646,7 @@ ol {
     }
 
     .post-body {
-        /* grid-area: post-body;
-        display: grid;
-        justify-content: center; */
         grid-template-columns: 63%;
-        /* width: 100%;
-        height: max-content; */
     }
 
     .page-arrows {
@@ -720,43 +693,7 @@ ol {
 
     .post-body img {
         width: 60%;
-        /* margin-left: 15%; */
     }
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.box-model-activity {
-    width: 600px;
-    padding: 10px;
-    border: 5px solid orange;
-    margin: 20px;
-    background-color: greenyellow;
-}
-
-/* img {
-    width: 600px;
-} */
