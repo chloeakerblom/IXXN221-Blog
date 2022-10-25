@@ -654,6 +654,29 @@ ol {
         margin-left: 18.5%;
     }
 
+    .image-grid-3 {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 31.9% 31.9% 31.9%;
+        grid-template-areas: "image1 image2 image3";
+        column-gap: 1rem;
+    }
+
+    .image-grid-2 {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 48.85% 48.85%;
+        grid-template-areas: "image1 image2";
+        column-gap: 1rem;
+    }
+
+    .image-grid-2-uneven {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 79% 17.2%;
+        grid-template-areas: "image1 image2";
+        column-gap: 1rem;
+    }
 
 }
 
@@ -691,9 +714,9 @@ ol {
         grid-template-rows: 10% 7% 10% auto 20% 20%;
     }
 
-    .post-body img {
+    /* .post-body img {
         width: 60%;
-    }
+    } */
 
 
 }
