@@ -11,11 +11,8 @@ body{
     height: 100vh;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
 
+/* Navigation */
 .logo {
     font-size: 32px;
     transition: all .2s ease-in-out;
@@ -23,31 +20,6 @@ a {
 
 .logo:hover {
     transform: scale(1.1);
-}
-
-.home{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 10% 20% 50% auto 20%;
-    grid-template-areas: 
-        "nav"
-        "title"
-        "intro-card"
-        "card-grid"
-        "footer";
-}
-
-.post{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 10% 7% 15% auto 20% 20%;
-    grid-template-areas: 
-        "nav"
-        "date"
-        "title"
-        "post-body"
-        "page-arrows"
-        "footer";
 }
 
 .navigation {
@@ -116,6 +88,19 @@ span {
 }
 
 
+/* Home page */
+.home{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 20% 50% auto 20%;
+    grid-template-areas: 
+        "nav"
+        "title"
+        "intro-card"
+        "card-grid"
+        "footer";
+}
+
 .title {
     grid-area: title;
     display: flex;
@@ -123,15 +108,6 @@ span {
     align-items: center;
     font-size: 20px;
     padding-top: 30px;
-}
-
-.date {
-    grid-area: date;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-    overflow-y: hidden;
 }
 
 .intro-card {
@@ -176,6 +152,8 @@ span {
     overflow-y: hidden;
 }
 
+
+/* Cards for each week on home page */
 .card-grid {
     height: 6000px;
     width: 100%;
@@ -244,7 +222,6 @@ span {
     background-position: 0;
 }
 
-
 .card-img {
     grid-area: card-img;
     border: 1px solid #cccccc;
@@ -283,53 +260,65 @@ span {
 .week1 {
     grid-area: week1;
 }
-
 .week2 {
     grid-area: week2;
 }
-
 .week3 {
     grid-area: week3;
 }
-
 .week4 {
     grid-area: week4;
 }
-
 .week5 {
     grid-area: week5;
 }
-
 .week6 {
     grid-area: week6;
 }
-
 .holiday {
     grid-area: holiday;
 }
-
 .week7 {
     grid-area: week7;
 }
-
 .week8 {
     grid-area: week8;
 }
-
 .week9 {
     grid-area: week9;
 }
-
 .week10 {
     grid-area: week10;
 }
-
 .week11 {
     grid-area: week11;
 }
-
 .week12 {
     grid-area: week12;
+}
+
+
+/* Post pages */
+.post{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 7% 15% auto 20% 20%;
+    grid-template-areas: 
+        "nav"
+        "date"
+        "title"
+        "post-body"
+        "page-arrows"
+        "footer";
+}
+
+.date {
+    grid-area: date;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    overflow-y: hidden;
 }
 
 .post-title {
@@ -353,6 +342,26 @@ span {
     margin-top: 0.2rem;
 }
 
+.post img {
+    width: 100%;
+    margin-top: 2rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.post-body a {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(143, 188, 143, 0.5);
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+}
+
+.post-body a:hover {
+    color: rgb(143, 188, 143, 0.5);
+}
+
+
+/* Next/previous page arrows */
 .page-arrows {
     grid-area: page-arrows;
     display: flex;
@@ -360,25 +369,6 @@ span {
     align-items: center;
     margin-bottom: 10px;
     height: 100px;
-}
-
-footer {
-    grid-area: footer;
-    background-color: rgb(143, 188, 143, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer h4 {
-    font-size: 30px;
-}
-
-img {
-    width: 100%;
-    margin-top: 2rem;
-    border: 1px solid #cccccc;
-    border-radius: 0px;
 }
 
 .page-arrows {
@@ -412,10 +402,12 @@ img {
 
 .page-arrows .before span {
     margin-right: 5px;
+    margin-left: 0;
 }
 
 .page-arrows .next span {
     margin-left: 5px;
+    margin-right: 0;
 }
 
 .page-arrows a:hover {
@@ -424,6 +416,27 @@ img {
 
 .page-arrows .material-symbols-outlined {
     line-height: 0.55;
+}
+
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: rgb(143, 188, 143, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h4 {
+    font-size: 30px;
+}
+
+
+/* Other elements */
+a {
+    text-decoration: none;
+    color: black;
 }
 
 ul {
@@ -448,17 +461,6 @@ ol {
     margin-bottom: 1.5rem;
 }
 
-.post-body a {
-    text-decoration-line: underline;
-    text-decoration-color: rgb(143, 188, 143, 0.5);
-    text-decoration-style: dotted;
-    text-decoration-thickness: 2px;
-}
-
-.post-body a:hover {
-    color: rgb(143, 188, 143, 0.5);
-}
-
 .box-model-activity {
     width: 600px;
     padding: 10px;
@@ -469,12 +471,44 @@ ol {
 
 
 @media screen and (min-width: 688px){
+    /* Navigation */
+    .navigation {
+        padding-left: 8%;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .dropdown-button {
+        font-size: 20px;
+        min-width: 180px;
+    }
+
+    .dropdown-content {
+        font-size: 15px;
+        min-width: 180px;
+    }
+    
+
+    /* Home page */
     .title {
         padding-left: 0;
         font-size: 30px;
         justify-content: center;
     }
 
+    .intro-card {
+        grid-template-rows: 70% 30%;
+    }
+
+    .intro-text {
+        padding-top: 1.5rem;
+        padding-left: 9%;
+    }
+
+
+    /* Cards for each week on home page */
     .card-grid {
         height: 3500px;
         justify-content: center;
@@ -500,35 +534,9 @@ ol {
         border-radius: 5px;
     }
 
-    .intro-card {
-        grid-template-rows: 70% 30%;
-    }
-
-    .intro-text {
-        padding-top: 1.5rem;
-        padding-left: 9%;
-    }
     .card-text {
         padding-left: 0;
         padding-right: 7.5px;
-    }
-
-    .logo {
-        font-size: 40px;
-    }
-
-    .dropdown-button {
-        font-size: 20px;
-        min-width: 180px;
-    }
-
-    .dropdown-content {
-        font-size: 15px;
-        min-width: 180px;
-    }
-
-    .navigation {
-        padding-left: 8%;
     }
 
     img {
@@ -537,6 +545,8 @@ ol {
         border-radius: 5px;
     }
 
+
+    /* Post pages */
     .post{
         grid-template-rows: 10% 7% 10% auto 20% 20%;
     }
@@ -550,6 +560,8 @@ ol {
         grid-template-columns: 80%;
     }
 
+
+    /* Next/previous page arrows */
     .page-arrows {
         width: 80%;
         margin-left: 10%;
@@ -557,7 +569,37 @@ ol {
    
 }
 
+
 @media screen and (min-width: 992px){
+    /* Navigation */
+    .navigation {
+        padding-left: 3%;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .dropdown-button {
+        font-size: 17px;
+    }
+
+    .dropdown-content {
+        font-size: 12px;
+    }
+
+    
+    /* Home page */
+    .title {
+        grid-area: title;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 18.25%;
+        padding-top: 30px;
+        font-size: 25px;
+    }
+   
     .intro-card {
         grid-template-columns: 36% 24%;
         justify-content: center;
@@ -566,6 +608,17 @@ ol {
         grid-template-areas: "intro-img intro-text";
     }
 
+    .intro-text {
+        padding-top: 10%;
+        padding-left: 0;
+    }
+
+    .intro-img {
+        border-radius: 5px;
+    }
+
+
+    /* Cards for each week on home page */
     .card-grid {
         height: 1875px;
         justify-content: center;
@@ -591,41 +644,8 @@ ol {
         object-position: top left;
     }
 
-    .intro-text {
-        padding-top: 10%;
-        padding-left: 0;
-    }
 
-    .intro-img {
-        border-radius: 5px;
-    }
-
-    .title {
-        grid-area: title;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left: 18.25%;
-        padding-top: 30px;
-        font-size: 25px;
-    }
-
-    .navigation {
-        padding-left: 3%;
-    }
-
-    .logo {
-        font-size: 30px;
-    }
-
-    .dropdown-button {
-        font-size: 17px;
-    }
-
-    .dropdown-content {
-        font-size: 12px;
-    }
-
+    /* Post pages */
     .post{
         grid-template-rows: 10% 10% 20% auto 20% 20%;
     }
@@ -649,11 +669,8 @@ ol {
         grid-template-columns: 63%;
     }
 
-    .page-arrows {
-        width: 63%;
-        margin-left: 18.5%;
-    }
 
+    /* Grid layouts for some images on post pages */
     .image-grid-3 {
         display: grid;
         grid-template-rows: auto;
@@ -678,19 +695,18 @@ ol {
         column-gap: 1rem;
     }
 
-}
 
-@media screen and (min-width: 1312px){
-    .card-grid {
-        height: 2500px;
-    }    
-
-    .card {
-        height: 450px;
-        overflow-y: hidden;
-        grid-template-rows: 65% 35%;
+    /* Next/previous page arrows */
+    .page-arrows {
+        width: 63%;
+        margin-left: 18.5%;
     }
 
+}
+
+
+@media screen and (min-width: 1312px){
+    /* Navigation */
     .logo {
         font-size: 50px;
     }
@@ -705,18 +721,29 @@ ol {
         min-width: 250px;
     }
 
+
+    /* Home page */
     .title {
         padding-left: 18.25%;
         font-size: 40px;
     }
+    
 
+    /* Cards for each week on home page */
+    .card-grid {
+        height: 2500px;
+    }    
+
+    .card {
+        height: 450px;
+        overflow-y: hidden;
+        grid-template-rows: 65% 35%;
+    }
+
+    
+    /* Post pages */
     .post{
         grid-template-rows: 10% 7% 10% auto 20% 20%;
     }
-
-    /* .post-body img {
-        width: 60%;
-    } */
-
 
 }
